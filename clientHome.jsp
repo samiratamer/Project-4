@@ -5,10 +5,10 @@
 <head><title>CNT 4714 Spring 2026 – Client User</title></head>
 <body style="background-color:black; color:white;">
 
-  <h1 style="color:green; text-align:center;">
+  <h1 style="color:red; text-align:center;">
     Welcome to the Spring 2026 Project 4 Enterprise System
   </h1>
-  <h2 style="color:orange; text-align:center;">
+  <h2 style="color:cyan; text-align:center;">
     A Servlet/JSP-based Multi-tiered Enterprise Application Using A Tomcat Container
   </h2>
 
