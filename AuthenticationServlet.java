@@ -1,4 +1,4 @@
-/* Name: Samira Tamer
+/* Name:Samira Tamer
    Course: CNT 4714 – Spring 2026 – Project Four
    Assignment title: A Three-Tier Distributed Web-Based Application
    Date: April 27, 2026
@@ -19,19 +19,18 @@ public class AuthenticationServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        // Load systemapp properties to connect to credentialsDB
         Properties props = new Properties();
-        String propPath = getServletContext().getRealPath("/WEB-INF/conf/systemapp.properties");
-        props.load(new FileInputStream(propPath));
+        String propPath = getServletContext()
+                .getRealPath("/WEB-INF/conf/systemapp.properties");
 
         Connection conn = null;
         try {
+            props.load(new FileInputStream(propPath));
             Class.forName(props.getProperty("db.driver"));
             conn = DriverManager.getConnection(
-                props.getProperty("db.url"),
-                props.getProperty("db.username"),
-                props.getProperty("db.password")
-            );
+                    props.getProperty("db.url"),
+                    props.getProperty("db.username"),
+                    props.getProperty("db.password"));
 
             String sql = "SELECT * FROM usercredentials WHERE username=? AND password=?";
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -40,7 +39,7 @@ public class AuthenticationServlet extends HttpServlet {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                // Authentication successful – redirect based on username
+                // Credentials matched – redirect based on who logged in
                 if (username.equals("root")) {
                     response.sendRedirect("Front-End-Pages/rootHome.jsp");
                 } else if (username.equals("client")) {
@@ -56,8 +55,11 @@ public class AuthenticationServlet extends HttpServlet {
                 response.sendRedirect("Front-End-Pages/errorpage.html");
             }
 
-            rs.close(); ps.close();
+            rs.close();
+            ps.close();
+
         } catch (Exception e) {
+            e.printStackTrace();
             response.sendRedirect("Front-End-Pages/errorpage.html");
         } finally {
             try { if (conn != null) conn.close(); } catch (Exception ignore) {}
