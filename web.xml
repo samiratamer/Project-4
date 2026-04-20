@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+  <servlet>
+    <servlet-name>AuthenticationServlet</servlet-name>
+    <servlet-class>project4.AuthenticationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthenticationServlet</servlet-name>
+    <url-pattern>/AuthenticationServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RootUserServlet</servlet-name>
+    <servlet-class>project4.RootUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RootUserServlet</servlet-name>
+    <url-pattern>/RootUserServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ClientUserServlet</servlet-name>
+    <servlet-class>project4.ClientUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClientUserServlet</servlet-name>
+    <url-pattern>/ClientUserServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddSupplierServlet</servlet-name>
+    <servlet-class>project4.AddSupplierServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddSupplierServlet</servlet-name>
+    <url-pattern>/AddSupplierServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddPartServlet</servlet-name>
+    <servlet-class>project4.AddPartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddPartServlet</servlet-name>
+    <url-pattern>/AddPartServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddJobServlet</servlet-name>
+    <servlet-class>project4.AddJobServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddJobServlet</servlet-name>
+    <url-pattern>/AddJobServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddShipmentServlet</servlet-name>
+    <servlet-class>project4.AddShipmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddShipmentServlet</servlet-name>
+    <url-pattern>/AddShipmentServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AccountantUserServlet</servlet-name>
+    <servlet-class>project4.AccountantUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AccountantUserServlet</servlet-name>
+    <url-pattern>/AccountantUserServlet</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>Front-End-Pages/authenticate.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
