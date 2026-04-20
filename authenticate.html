@@ -1,40 +1,57 @@
-<!-- Name: 
+<!-- Name:Samira Tamer
      Course: CNT 4714 – Spring 2026 – Project Four
      Assignment title: A Three-Tier Distributed Web-Based Application
      Date: April 27, 2026 -->
 <!DOCTYPE html>
 <html>
-<head><title>CNT 4714 Spring 2026 – Project 4</title></head>
-<body style="background-color:black; text-align:center;">
+<head>
+  <title>CNT 4714 Spring 2026 – Project 4 Enterprise System</title>
+</head>
+<body style="background-color:black; text-align:center; margin:0; padding:0;">
 
-  <h1 style="color:yellow; font-weight:bold;">
-    Welcome to the Spring 2026 Project 4 Enterprise System
-  </h1>
-  <h2 style="color:green;">
-    A Servlet/JSP-based Multi-tiered Enterprise Application Using A Tomcat Container
-  </h2>
-  <h3 style="color:red;">- User Authentication Page -</h3>
+  <div style="background-color:black; padding:20px;">
+    <h1 style="color:yellow; font-family:Arial;">
+      Welcome to the Spring 2026 Project 4 Enterprise System
+    </h1>
+    <h2 style="color:green; font-family:Arial;">
+      A Servlet/JSP-based Multi-tiered Enterprise Application Using A Tomcat Container
+    </h2>
+    <h3 style="color:red; font-family:Arial;">- User Authentication Page -</h3>
+  </div>
 
-  <hr>
+  <hr style="border-color:white;">
 
-  <form action="../AuthenticationServlet" method="post">
-    <table align="center">
-      <tr>
-        <td style="color:yellow;">UserName</td>
-        <td><input type="text" name="username" style="background-color:olive;"/></td>
-      </tr>
-      <tr>
-        <td style="color:yellow;">Password</td>
-        <td><input type="password" name="password" style="background-color:olive;"/></td>
-      </tr>
-      <tr>
-        <td colspan="2" align="center">
-          <input type="submit" value="Click To Authenticate"
-                 style="background-color:green; color:yellow; font-weight:bold;"/>
-        </td>
-      </tr>
-    </table>
-  </form>
+  <div style="padding:40px;">
+    <form action="../AuthenticationServlet" method="post">
+      <table align="center" cellpadding="8">
+        <tr>
+          <td style="color:yellow; font-family:Arial; font-size:16px; text-align:right;">
+            UserName
+          </td>
+          <td>
+            <input type="text" name="username"
+                   style="background-color:olive; border:1px solid gray; padding:4px; width:180px;"/>
+          </td>
+        </tr>
+        <tr>
+          <td style="color:yellow; font-family:Arial; font-size:16px; text-align:right;">
+            Password
+          </td>
+          <td>
+            <input type="password" name="password"
+                   style="background-color:olive; border:1px solid gray; padding:4px; width:180px;"/>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center; padding-top:16px;">
+            <input type="submit" value="Click To Authenticate"
+                   style="background-color:green; color:yellow; font-weight:bold;
+                          border:2px solid yellow; padding:6px 14px; cursor:pointer;"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
 
 </body>
 </html>
